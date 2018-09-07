@@ -7,8 +7,8 @@
     "reason-react": "^0.5.3"
   },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "concurrently \"bsb -clean-world -make-world -w\" \"next dev\"",
+    "build": "bsb -clean-world -make-world && next build",
     "start": "next start"
   },
   "devDependencies": {
