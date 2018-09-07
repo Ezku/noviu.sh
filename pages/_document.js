@@ -13,11 +13,14 @@ export default class MyDocument extends Document {
           <style>{`
             @import url("https://use.typekit.net/lgx6cgr.css");
             * {
-              font-family: neue-haas-grotesk-display, sans-serif;
+              font-family: neue-haas-grotesk-text, sans-serif;
             }
             html {
               font-size: 16px;
               font-weight: 400;
+            }
+            h1, h2, h3, h4, h5, h6 {
+              font-family: neue-haas-grotesk-display, sans-serif;
             }
             h1 {
               font-size: 42px;
