@@ -3,9 +3,9 @@ let component = ReasonReact.statelessComponent("Index");
 let make = (_children) => {
   ...component,
   render: (_self) =>
-    <div>
+    <h1>
       (ReasonReact.string("Hello world!.re"))
-    </div>
+    </h1>
 };
 
 let default = ReasonReact.wrapReasonForJs(~component, (_jsProps) => make([||]));
