@@ -10,5 +10,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "bs-platform": "^4.0.5",
+    "concurrently": "^4.0.1"
   }
 }
