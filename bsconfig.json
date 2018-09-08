@@ -1,13 +1,7 @@
 {
   "name": "noviu.sh",
-  "sources": [
-    "components",
-    "pages",
-    "bindings"
-  ],
-  "bs-dependencies": [
-    "reason-react"
-  ],
+  "sources": ["components", "pages", "bindings", "utils"],
+  "bs-dependencies": ["reason-react"],
   "reason": {
     "react-jsx": 2
   },
@@ -16,8 +10,6 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bsc-flags": [
-    "-bs-super-errors"
-  ],
+  "bsc-flags": ["-bs-super-errors"],
   "refmt": 3
 }
