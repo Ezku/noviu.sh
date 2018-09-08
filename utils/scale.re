@@ -1,20 +1,18 @@
-let Math = Js.Math;
-
-let defaultRatio = Math._E;
+let defaultRatio = Js.Math._E;
 let defaultBase = 16;
-let defaultStep = 1 / 4;
+let defaultStep = 0.25;
 let defaultOffset = 0;
 
-let nearestRoundNumber = (i: number) => 2 * Math.round(i / 2);
+let nearestEvenNumber = (number: float): int =>
+  2 * int_of_float(Js.Math.round(number /. 2.));
 
 let makeScale =
     (
       ~base=defaultBase,
       ~ratio=defaultRatio,
       ~step=defaultStep,
-      ~offset=defaultOffset,
-      s: number,
-    ) =>
-  nearestRoundNumber(base * Math.pow(ratio, (s - offset) * step));
+      ~offset=defaultOffset
+    ) => (s: int) =>
+  nearestEvenNumber(float_of_int(base) *. Js.Math.pow_float(~base=ratio,~exp=float_of_int(s - offset) *. step));
 
-let default = makeScale();
+let default: int => int = makeScale;
