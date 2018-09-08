@@ -1,33 +1,30 @@
 import Document, { Head, Main, NextScript } from 'next/document';
+import { extractCritical } from 'emotion-server';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+  static async getInitialProps({ renderPage, ...otherProps }) {
+    const initialProps = await Document.getInitialProps({
+      renderPage,
+      ...otherProps
+    });
+    const page = renderPage();
+    const styles = extractCritical(page.html);
+    return { ...initialProps, ...page, ...styles };
+  }
+
+  constructor(props) {
+    super(props);
+    const { __NEXT_DATA__, ids } = props;
+    if (ids) {
+      __NEXT_DATA__.ids = ids;
+    }
   }
 
   render() {
     return (
       <html>
         <Head>
-          <style>{`
-            @import url("https://use.typekit.net/lgx6cgr.css");
-            * {
-              font-family: neue-haas-grotesk-text, sans-serif;
-            }
-            html {
-              font-size: 16px;
-              font-weight: 400;
-            }
-            h1, h2, h3, h4, h5, h6 {
-              font-family: neue-haas-grotesk-display, sans-serif;
-            }
-            h1 {
-              font-size: 42px;
-              font-weight: 600;
-              letter-spacing: -0.03em;
-            }
-          `}</style>
+          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
           <Main />
