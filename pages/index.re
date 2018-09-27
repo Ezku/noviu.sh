@@ -9,23 +9,22 @@ module Styles = {
         ~alignItems="center",
         ~justifyContent="center",
         ~flexDirection="column",
+        ~backgroundColor="#2876f9",
+        ~backgroundImage="linear-gradient(315deg, #2876f9 0%, #6d17cb 74%)",
         (),
       ),
     );
-
   let header =
     Emotion.Style.make(
       ReactDOMRe.Style.make(
+        ~fontFamily="neue-haas-unica",
         ~fontSize="32px",
-        ~fontWeight="400",
-        ~letterSpacing="0.03em",
+        ~fontWeight="300",
+        ~letterSpacing="0.0618em",
         ~color="rgba(255, 255, 255, 0.99)",
-        ~backgroundColor="#045de9",
-        ~backgroundImage="linear-gradient(315deg, #045de9 0%, #09c6f9 74%)",
-        ~textShadow="1px 1px rgba(0,0,0, 0.9)",
-        ~boxShadow="3px 3px 3px rgba(0,0,0,0.0618)",
+        ~border="2px solid rgba(255, 255, 255, 0.99)",
         ~padding="1.618rem",
-        ~borderRadius="4px",
+        ~borderRadius="6px",
         (),
       ),
     );
