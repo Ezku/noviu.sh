@@ -1,0 +1,10 @@
+# Ignore everything
+*
+# Then whitelist
+!./.yarn-offline-mirror
+!./bindings
+!./components
+!./pages
+!./utils
+!./.*
+!./*.*
