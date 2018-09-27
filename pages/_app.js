@@ -67,12 +67,7 @@ injectGlobal`
     font-family: neue-haas-grotesk-text, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: neue-haas-grotesk-display, sans-serif;
-  }
-  h1 {
-    font-size: 42px;
-    font-weight: 600;
-    letter-spacing: -0.03em;
+    font-family: neue-haas-grotesk-text, sans-serif;
   }
 `;
 
