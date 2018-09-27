@@ -2,7 +2,16 @@ let component = ReasonReact.statelessComponent("Index");
 
 module Styles = {
   let container =
-    Emotion.Style.make(ReactDOMRe.Style.make(~color="red", ()));
+    Emotion.Style.make(
+      ReactDOMRe.Style.make(
+        ~minHeight="100vh",
+        ~display="flex",
+        ~alignItems="center",
+        ~justifyContent="center",
+        ~flexDirection="column",
+        (),
+      ),
+    );
 };
 
 let make = _children => {
