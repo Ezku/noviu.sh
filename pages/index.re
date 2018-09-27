@@ -1,9 +1,14 @@
 let component = ReasonReact.statelessComponent("Index");
 
+module Styles = {
+  let container =
+    Emotion.Style.make(ReactDOMRe.Style.make(~color="red", ()));
+};
+
 let make = _children => {
   ...component,
   render: _self =>
-    <div>
+    <div className=Styles.container>
       <h1> {ReasonReact.string("Hello world!.re")} </h1>
       <p> {ReasonReact.string("Yes, hello!")} </p>
     </div>,
