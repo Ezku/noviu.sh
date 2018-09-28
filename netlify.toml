@@ -1,0 +1,8 @@
+[build]
+
+command = "yarn export"
+publish = "build"
+
+[build.environment]
+
+YARN_VERSION = "1.9.2"
