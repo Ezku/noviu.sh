@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style type="text/css" dangerouslySetInnerHTML={{
             __html: `
             @import url("https://use.typekit.net/lgx6cgr.css");
