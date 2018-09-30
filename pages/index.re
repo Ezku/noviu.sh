@@ -11,8 +11,8 @@ module Styles = {
         ~flexDirection="column",
         ~backgroundColor="#2876f9",
         ~backgroundImage="linear-gradient(315deg, #2876f9 0%, #6d17cb 74%)",
-        (),
-      ),
+        ()
+      )
     );
   let header =
     Emotion.Style.make(
@@ -23,10 +23,10 @@ module Styles = {
         ~letterSpacing="0.0618em",
         ~color="rgba(255, 255, 255, 0.99)",
         ~border="2px solid rgba(255, 255, 255, 0.99)",
-        ~padding="1.618rem",
+        ~padding="0.618rem 1.618rem 0.918rem",
         ~borderRadius="6px",
-        (),
-      ),
+        ()
+      )
     );
 };
 
@@ -34,8 +34,8 @@ let make = _children => {
   ...component,
   render: _self =>
     <div className=Styles.container>
-      <h1 className=Styles.header> {ReasonReact.string("novius.house")} </h1>
-    </div>,
+      <h1 className=Styles.header> (ReasonReact.string("novius.house")) </h1>
+    </div>
 };
 
 let default = ReasonReact.wrapReasonForJs(~component, _jsProps => make([||]));
