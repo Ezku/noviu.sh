@@ -28,6 +28,23 @@ module Styles = {
         ()
       )
     );
+  let names =
+    Emotion.Style.make(
+      ReactDOMRe.Style.make(~padding="0.618rem 1.618rem 0.918rem", ())
+    );
+  let name =
+    Emotion.Style.make(
+      ReactDOMRe.Style.make(
+        ~fontFamily="neue-haas-unica",
+        ~fontSize="1rem",
+        ~fontWeight="300",
+        ~letterSpacing="0.0271em",
+        ~color="rgba(255, 255, 255, 0.99)",
+        ~margin="0.618rem",
+        ~textAlign="center",
+        ()
+      )
+    );
 };
 
 let make = _children => {
@@ -35,6 +52,10 @@ let make = _children => {
   render: _self =>
     <div className=Styles.container>
       <h1 className=Styles.header> (ReasonReact.string("novius.house")) </h1>
+      <ul className=Styles.names>
+        <li className=Styles.name> (ReasonReact.string("Anna Novius")) </li>
+        <li className=Styles.name> (ReasonReact.string("Eevert Novius")) </li>
+      </ul>
     </div>
 };
 
