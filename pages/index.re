@@ -18,13 +18,13 @@ module Styles = {
     Emotion.Style.make(
       ReactDOMRe.Style.make(
         ~fontFamily="neue-haas-unica",
-        ~fontSize="32px",
+        ~fontSize="2rem",
         ~fontWeight="300",
         ~letterSpacing="0.0618em",
         ~color="rgba(255, 255, 255, 0.99)",
         ~border="2px solid rgba(255, 255, 255, 0.99)",
         ~padding="0.618rem 1.618rem 0.918rem",
-        ~borderRadius="6px",
+        ~borderRadius="0.1875em",
         ()
       )
     );
