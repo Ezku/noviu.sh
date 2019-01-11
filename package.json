@@ -17,7 +17,7 @@
     "export": "yarn build && yarn next export -o build"
   },
   "devDependencies": {
-    "bs-platform": "^4.0.5",
+    "bs-platform": "^4.0.18",
     "concurrently": "^4.0.1"
   }
 }
